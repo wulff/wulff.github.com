@@ -34,6 +34,13 @@ div#main-content {
   overflow: hidden;
 }
 
+div#post {
+  width: 480px;
+}
+div#post img {
+  max-width: 480px;
+}
+
 footer {
   padding-top: 4em;
 }
