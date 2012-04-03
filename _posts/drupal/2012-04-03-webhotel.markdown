@@ -1,0 +1,192 @@
+---
+layout: post
+title: Domæne og webhotel
+category: drupalbook
+language: da
+tags: webhotel gratisdns
+---
+
+# {{ page.title }}
+
+## Domæne eller ej
+
+Før du går i gang med din første Drupal-installation skal du overveje om den blot er til eget brug, eller om du på et tidspunkt vil dele den med resten af internettet. Hvis du ønsker at lege med en lokal installation af Drupal kan du starte med vejledningen på side XXX. Hvis du gerne vil dele dit arbejde med andre kan du installere Drupal på et webhotel. I så fald kan du følge resten af dette afsnit og derefter gå til vejledningen på side XXX.
+
+Hvis du blot ønsker at udforske Drupal har du ikke behov for at købe et domæne; du kan køre alle dine Drupal-sites på din egne maskine uden at røre en finger. Hvis du arbejder på et site, som du på et tidspunkt gerne vil dele med andre, giver det mening at købe et domæne til formålet. Hvis du ikke har brug for at oprette dit eget domæne kan du springe over resten af dette afsnit og fortsætte med *Installér Drupal på din egen maskine* på side XXX.
+
+Et domæne er en unik adresse på internettet (ligesom et telefonnummer er en unik adresse på telefonnettet). Et domæne kan f.eks. være [dr.dk](http://www.dr.dk/), [politiken.dk](http://politiken.dk/), [information.dk](http://www.information.dk/), osv. Mange webhoteller tilbyder registrering af domæner, men det er generelt en god idé at holde sit domæne adskilt fra sit webhotel. På den måde er det nemmere at skifte udbyder efterhånden som ens behov ændres.
+
+Hvis du vil have dit eget domænenavn er den bedste løsning i øjeblikket at købe det gennem GratisDNS. GratisDNS sørger for kontakten til DK Hostmaster (firmaet som holder styre på de danske domænenavne), og giver dig gode værktøjer til at arbejde med dit domæne.
+
+## Vælg et domænenavn
+
+Første trin i processen er at vælge et domænenavn. På forsiden af [GratisDNS.dk](https://web.gratisdns.dk/) er der et søgefelt hvor du kan søge efter ledige domænenavne med de mest almindelige endelser som f.eks. *.dk*, *.com*, *.net*, osv.
+
+![Brug GratisDNS til at søge efter et domænenavn](http://farm8.staticflickr.com/7191/6799830348_35a9459e41_o.png)
+
+På resultatsiden kan du se hvorvidt det ønskede domæne er tilgængeligt på en række af de mest populære top-level domæner. Hvis du søger efter *drupalbogen* vil du se at domænet *drupalbogen.dk* er optaget mens f.eks. *drupalbogen.eu* og *drupalbogen.com* er ledige i skrivende stund.
+
+![Udsnit af GratisDNS søgeresultat](http://farm8.staticflickr.com/7039/6945937051_b98fac177d_z.jpg)
+
+Når du har fundet et ledigt domæne skal du klikke på knappen *Registrer* for at starte bestillingen. I dette eksempel gennemgår vi bestillingen af domænet *drupalbogen.dk*.
+
+Når du har klikket på *Registrer* skal du som det første indtaste din adresse og acceptere GratisDNS' handels- og domænebetingelser. Hvis du bestiller et .dk-domæne kan du vælge om din adresse skal skjules når folk slår dit domænenavn op i WHOIS-databasen.[^whois] Ejer du allerede et eller flere domæner kan du desuden indtaste dit registrant ID, så dit nye domæne kan blive knyttet til den rigtige bruger hos DK Hostmaster. Når du har indtastet alle relevante oplysninger kan du fortsætte ved at klikke på knappen *Put i indkøbskurv*.
+
+[^whois]: WHOIS-databasen indeholder bl.a. informationer om ejeren og administratoren af et givet domænenavn.
+
+Du kan nu gennemse indholdet af din indkøbskurv. Hvis du ikke ønsker at registrere flere domænenavne i denne omgang skal du klikke på *Bestil* for at gå til betalingssiden. Du kan vælge at betale med kreditkort (Dankort, Visa-kort, osv.), med elektronisk faktura (hvis du handler på vegne af en offentlig institution) eller med en simpel bankoverførsel.
+
+![Gennemse din indkøbskurv](http://farm8.staticflickr.com/7209/6799830418_4cabd5b70c_o.png)
+
+Når betalingen er gennemført vises en kvitteringsside hvor GratisDNS siger tak for ordren. Du modtager samtidig en kvitteringsmail som indeholder dit bestillingsnummer. Det er en god idé at gemme denne mail hvis du skulle få behov for at kontakte GratisDNS' supportafdeling.
+
+Efter et stykke tid (i dette tilfælde tog det et par timer) modtager du endnu to mails: Én som fortæller at der er blevet opsat DNS for det nye domæne, og én som fortæller dig at din ordre er færdigbehandlet. Den sidste mail indeholder et link til din faktura. Det er en god ide at udskrive en kopi af fakturaen eller gemme en kopi i PDF-format.
+
+Hvis du har valgt at registrere et .dk-domæne skal du desuden bekræfte dit domæne hos DK Hostmaster, som er administrator for alle .dk-domæner. Umiddelbart efter den sidste mail fra GratisDNS modtager du en mail fra DK Hostmaster med oplysninger om hvordan du bekræfter dit domæne. Når det er gjort er det tid til at bestille et webhotel.
+
+## Valg og køb af webhotel
+
+Hvis du har en bredbåndsforbindelse og en computer som altid er tændt kan du sagtens selv hoste dit site, men for det meste er det langt nemmere at leje serverplads hos et webhotel. Der findes webhoteller til priser fra tyve til flere tusinde kroner om måneden afhængigt af dine behov for trafik, overvågning og backup.
+
+Som minimum kan du være sikker på at du får adgang til en server som altid er tilgængelig, og som du for de billigere webhotellers vedkommende ikke selv skal vedligeholde med softwareopdateringer o.l.
+
+> **Hint:** Før du vælger et billigt webhotel er det en god idé at høre om andre brugere på [Drupal Danmark](http://drupaldanmark.dk/) har gode eller dårlige erfaringer med den pågældende udbyder. Den vigtigste huskeregel ved køb af webhotel er at *du får hvad du betaler for*.
+
+![Forsiden på gigahost.dk](http://farm8.staticflickr.com/7198/6945937133_7db462f722_o.png)
+
+I dette afsnit beskriver vi hvordan du køber og konfigurerer et webhotel hos den danske udbyder Gigahost. Fremgangsmåden vil være den samme uanset hvilken udbyder du vælger. I slutningen af afsnittet er der en liste over alternativer til Gigahost.
+
+Start med at gå til [gigahost.dk](http://gigahost.dk/) og klik på linket *Bestil dit webhotel nu*. Du bliver bedt om at indtaste dine kontaktoplysninger og om at vælge det brugernavn som du ønsker at bruge til at administrere din konto.
+
+> **Hint:** Hos Gigahost betaler du for et år ad gangen, så inklusiv oprettelse kommer dit webhotel til at koste 340 kroner. Hvis du ikke er tilfreds med webhotellet kan du lukke din konto inden for 14 dage og få dine penge retur.
+
+Når du har gennemført betalingen med enten Dankort, kreditkort eller bankoverførsel bliver du sendt videre til loginsiden hvor du kan logge ind med den kombination af brugernavn og adgangskode, som du valgte tidligere.
+
+![Loginsiden til Gigahosts kontrolpanel](http://farm8.staticflickr.com/7053/6799830508_bef3d105e6_o.png)
+
+Når du har logget ind bliver du præsenteret for kontrolpanelets forside, som indeholder en liste over dine domæner (som sikkert vil være tom første gang du logger ind), links til ofte benyttede funktioner samt de seneste nyheder fra Gigahosts blog og support.
+
+![Kontrolpanelets forside](http://farm8.staticflickr.com/7067/6945937223_97e689b8ee_o.png)
+
+I venstre side af skærmen er der en række faneblade som giver dig mulighed for at tilpasse indstillingerne for dit webhotel. Fanerne dækker over følgende funktioner og værktøjer:
+
+Forside
+:	Viser en oversigt over dine aktive domæner og viser nyheder fra Gigahost.
+
+Adgang
+:	Viser alle de oplysninger, som du skal bruge for at overføre filer til webhotellet, forbinde til databaseserveren samt sende og modtage e-mail. Siden indeholder også de oplysninger, som du skal bruge til at konfigurere dit domæne hos GratisDNS.
+
+Mailadresser
+:	Her kan du administrere de e-mail-adresser, som er knyttet til dine domæner.
+
+Domæner
+:	Viser en oversigt over de domæner, som er knyttet til din Gigahost konto. Du kan tilknytte eller tilkøbe domæner samt administrere underdomæner for hvert af dine domæner.
+
+Databaser
+:	Her kan du administrere dine MySQL-databaser og få adgang til værktøjet phpMyAdmin.
+
+Værktøjer
+:	Viser dig detaljeret statistik for dine domæner og giver dig mulighed for at opsætte periodiske opgaver (cron-jobs).
+
+SMS
+:	Giver dig mulighed for at sende SMS-beskeder. Du kan enten sende SMS-beskeder direkte fra kontrolpanelet eller bruge Gigahosts API til at sende SMS-beskeder fra dit site. SMS-beskeder koster i skrivende stund 29 øre pr. stk.
+
+Support
+:	Indedholder links til Gigahosts *Knowledgebase* og teknisk information om dit webhotel og giver dig mulighed for at kontakte Gigahost support.
+
+Indstillinger
+:	Her kan du ændre dine kontaktoplysninger, skifte din adgangskode og vælge sprog for kontrolpanelet.
+
+Betalinger
+:	Viser en oversigt over dit forbrug og giver dig mulighed for enten at forlænge din konto eller lukke den helt.
+
+Driftsstatus
+:	Giver dig et overblik og aktuelle driftsproblemer og planlagt vedligehold.
+
+Log ud
+:	Klik på denne fane når du er færdig med at tilpasse indstillingerne for dit webhotel.
+
+Først skal du gå til faneblade *Domæner* og klikke på underfanen *Tilknyt domæne*. Indtast dit domænenavn i tekstfeltet og klik på knappen *Tilknyt*.
+
+![Tilknyt et domæne til din Gigahost konto](http://farm8.staticflickr.com/7039/6799830632_3c6dd0a370_o.png)
+
+Når du har tilføjet domænet bliver det vist på oversigten som et selvstændigt domæne (dvs. et domæne som du ikke har købt gennem Gigahost). Indtil du tilpasser indstillingerne for domænet på GratisDNS viser Gigahost meddelelsen *Fejl ved domænet* udfor dit domænenavn. Fejlen skyldes at dit domænenavn endnu ikke peger på Gigahosts servere. Det retter vi op på i det følgende afsnit.
+
+![Fejl ved domænet](http://farm8.staticflickr.com/7197/6799830586_86eb751070_o.png)
+
+Før vi ændrer indstillingerne for domænet på GratisDNS skal vi have valgt en passende PHP-version for vores domæne og oprette en database, som Drupal kan bruge til at gemme sine data i.
+
+Fra domæneoversigten klikker du på dit domænenavn for at komme til domænets oversigtsside. På oversigtssiden kan du bl.a. se statistik for domænet, gå til domænets midlertidige URL (hvis DNS-oplysningerne endnu ikke er opdateret), oprette viderestilling for domænet eller fjerne det fra din konto.
+
+![Oversigtssiden for et domæne](http://farm8.staticflickr.com/7210/6945937335_0ed075f81a_o.png)
+
+Fra oversigtssiden klikker du på fanebladet *PHP-opsætning*, vælger *PHP 5.3* fra dropdown-listen og klikker på *Skift PHP-version* for at skifte til den seneste udgave af PHP. Fra denne side kan du også skifte mere grundlæggende indstillinger for PHP. Klik på linket *Skift PHP-indstillinger* for at tildele mere hukommelse til PHP eller ændre den maksimale størrelse af uploadede filer.
+
+![Skift PHP-version](http://farm8.staticflickr.com/7189/6799830718_3038e25eb7_o.png)
+
+Det sidste du mangler er at oprette en database til dit nye site. Klik på fanen *Databaser* og klik på underfanen *Opret ny database*. Her skal du indtaste navnet på den nye database og den adgangskode, som du bruger til at logge ind på kontrolpanelet. Hvis du har tænkt dig at knytte mange domæner til din konto er det en god idé at bruge domænenavnet som en del af navnet på databasen.
+
+![Opret en database til dit site](http://farm8.staticflickr.com/7187/6799830808_0c120804b1_o.png)
+
+Som tidligere nævnt er Gigahost ikke den eneste billige udbyder på det danske marked. Andre anbefalelsesværdige webhoteller som er til at betale for hobby-brugere:
+
+[Netplads.dk](http://netplads.dk/)
+:	Priser fra 19 kr. pr. måned.
+
+[Web-Hotel Danmark](http://www.webhot.dk/)
+:	Priser fra 199 kr. pr. måned.
+
+[Webhosting.dk](http://webhosting.dk/)
+:	Priser fra 35 kr. pr. måned.
+
+Hvis du allerede nu ved at du har behov for en kraftigere hosting-løsning, kan du med fordel starte med at kigge på ydelserne fra nedennævnte udbydere. Fælles for disse udbydere er at de kræver langt større teknisk indsigt end de billige webhoteller, fordi du typisk selv skal stå for at installere og vedligeholde den nødvendige software. Til gengæld får du fuld kontrol over dit hosting-miljø og kan dermed bygge mere avancerede løsninger.
+
+[Linode](http://www.linode.com/)
+:	TODO: beskriv VPS
+
+[Omega8](http://omega8.cc/)
+:	TODO: beskriv aegir
+
+[Slicehost](http://www.slicehost.com/)
+:	TODO: beskrivelse
+
+[VPS.net](http://www.vps.net/)
+: 	TODO: beskriv drupal-venlighed
+
+De ovennævnte leverandører har alle pakker som starter omkring 20 dollar pr. måned, typisk med mulighed for rabat hvis du køber større pakker eller binder dig for mere end én måned ad gangen.
+
+## Konfigurér dit domæne
+
+Før du kan tage dit webhotel i brug skal du sørge for at dit domænenavn peger på webhotellets servere. I dette afsnit bruges Gigahost igen som eksempel, men proceduren er stort set den samme uanset hvilket webhotel du har valgt.
+
+For at kunne opsætte de rigtige *DNS records* for domænet skal vi bruge IP adressen på den server som dit webhotel er placeret på. Hos Gigahost kan du finde alle de nødvendige oplysninger på fanebladet *Adgang*.
+
+![DNS-oplysninger for Gigahost webhotel](http://farm8.staticflickr.com/7190/6799830848_ea58cf32dd_o.png)
+
+Start med at logge ind på DNS kontrolpanelet hos GratisDNS. Du kan enten følge linket *Kontrolpanel* fra forsiden eller gå direkte til følgende adresse:
+
+> [http://admin.gratisdns.dk/](http://admin.gratisdns.dk/)
+
+DNS kontrolpanelet giver dig adgang til en række værktøjer som du kan bruge til at administrere dit domæne, de fleste værktøjer er rettet mod professionelle brugere, så i dette afsnit beskæftiger vi os kun med indstillingerne for *Primær DNS*.
+
+![DNS kontrolpanelets hovedmenu](http://farm8.staticflickr.com/7048/6799830904_1692f1e454_o.png)
+
+Når du klikket på knappen *Primær DNS* i hovedmenuen får du en oversigt over alle de domæner, som du har registreret gennem GratisDNS. Klik på knappen *Ændre DNS* udfor det domæne, som du ønsker at arbejde med.
+
+Kontrolpanelet for det enkelte domæne kan virke en smule uoverskueligt ved første øjekast, men i første omgang kan vi heldigvis nøjes med at kigge på de tre sektioner *A*, *CNAME* og *MX*. Under sektionen *A* skal du klikke på knappen *Tilføj A* for at tilføje en ny *A record* til dit domnæne. En A record fortæller DNS-systemet hvilken IP adresse et givet domæne skal pege på. Vi bruger oplysningerne fra Gigahosts kontrolpanel og fortæller GratisDNS at *drupalbogen.dk* skal pege på IP adressen `217.116.232.218`.
+
+![Tilføj en *A record* til dit domæne](http://farm8.staticflickr.com/7209/6945937581_9a684cf059_o.png)
+
+Når din A record er sat op kan folk få adgang til dit site ved at skrive dit domænenavn i deres browser (f.eks. *drupalbogen.dk*). For at gøre det muligt at bruge underdomæner som f.eks. *www.drupalbogen.dk* eller *beta.drupalbogen.dk* er vi nødt til at tilføje en *CNAME record*. En CNAME record fungerer som et alternativt navn for en A record, så den kan bruges til angive at de to førnævnte underdomæner begge skal pege på domænet *drupalbogen.dk*. I dette eksempel er der ikke behov for avancerede indstillinger som at have forskellige underdomæner til at pege på forskellige IP adresser, så vi laver et *stjernealias* som fortæller at alle underdomæner skal pege på den samme A record.
+
+![Tilføj en *CNAME record* til dit domæne](http://farm8.staticflickr.com/7177/6799830964_ca8fa4fac0_o.png)
+
+Vil du gerne kunne modtage e-mail på dit nye domæne skal du også konfigurere en *MX record*, som mail-servere bruger til at finde ud af hvor e-mail til et bestemt domæne rent faktisk skal sendes hen. I dette eksempel udnytter vi at mail følger med webhotellet hos Gigahost, så vi fortæller GratisDNS at al mail til domænet skal sendes til Gigahosts mail-server.
+
+![Tilføj en *MX record* til dit domæne](http://farm8.staticflickr.com/7055/6799831010_6b7dfe4f33_o.png)
+
+Når dine ændringer til DNSen er slået igennem (det sker typisk indenfor ca. 12 timer) kan du gå tilbage til kontrolpanelet hos Gigahost og kontrollere at dit domæne nu har skiftet status fra *Fejl ved domænet* til *Domænet virker*.
+
+![Domænet er klar til brug](http://farm8.staticflickr.com/7201/6799830762_a9012902f9_o.png)
+
+Hvis du har fulgt vejledningen i dette kapitel fra start til slut kan du nu gå til afsnittet om installation på webhotel på side XXX for at starte installationen af Drupal 7.
