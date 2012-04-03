@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Domæne og webhotel
-category: drupalbook
 language: da
+categories: learn drupal
 tags: webhotel gratisdns
 ---
 
