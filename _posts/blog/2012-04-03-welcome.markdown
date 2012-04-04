@@ -1,0 +1,8 @@
+---
+layout: post
+title: Welcome
+language: en
+categories: blog
+---
+
+# {{ page.title }}
