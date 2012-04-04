@@ -37,9 +37,7 @@ Prints a variable to the ‘message’ area of the page using drupal_set_message
 
 If, for some reason, you are not using Krumo, you can use the $name parameter to distinguish between different calls to dpm().
 
-You can see example output in the screenshot “dpm()” below.
-
-[![dpm() screenshot](/img/tutorials/devel-dpm.png)](/img/tutorials/devel-dpm.png)
+[![dpm() screenshot](/img/tutorials/devel-dpm.png)](/img/tutorials/devel-dpm.png){: .noborder}
 
 ### dvm()
 
@@ -49,9 +47,7 @@ Uses var_dump() to print a variable to the ‘message’ area of the page using 
 
 If, for some reason, you are not using Krumo, you can use the $name parameter to distinguish between different calls to dvm().
 
-You can see example output in the screenshot “dvm()” below.
-
-[![dvm() screenshot](/img/tutorials/devel-dvm.png)](/img/tutorials/devel-dvm.png)
+[![dvm() screenshot](/img/tutorials/devel-dvm.png)](/img/tutorials/devel-dvm.png){: .noborder}
 
 ### dpr()
 
@@ -63,9 +59,7 @@ Set the second parameter to TRUE if you want to return a string instead of print
 
 You can use the $name parameter to distinguish between different calls to dpr().
 
-You can see example output in the screenshot “dpr()” below.
-
-[![dpr() screenshot](/img/tutorials/devel-dpr.png)](/img/tutorials/devel-dpr.png)
+[![dpr() screenshot](/img/tutorials/devel-dpr.png)](/img/tutorials/devel-dpr.png){: .noborder}
 
 ### dvr()
 
@@ -77,9 +71,7 @@ Set the second parameter to TRUE if you want to return a string instead of print
 
 You can use the $name parameter to distinguish between different calls to dvr().
 
-You can see example output in the screenshot “dvr()” below.
-
-[![dvr() screenshot](/img/tutorials/devel-dvr.png)](/img/tutorials/devel-dvr.png)
+[![dvr() screenshot](/img/tutorials/devel-dvr.png)](/img/tutorials/devel-dvr.png){: .noborder}
 
 ### kpr()
 
@@ -89,9 +81,7 @@ Pretty-prints a variable to the browser using krumo. The output is displayed in 
 
 Set the second parameter to TRUE if you want to return a string instead of printing it.
 
-You can see example output in the screenshot “kpr()” below.
-
-[![kpr() screenshot](/img/tutorials/devel-kpr.png)](/img/tutorials/devel-kpr.png)
+[![kpr() screenshot](/img/tutorials/devel-kpr.png)](/img/tutorials/devel-kpr.png){: .noborder}
 
 ### dargs()
 
@@ -99,9 +89,7 @@ Prints the arguments passed into the current function. In this case, the argumen
 
     dargs()
 
-You can see example output in the screenshot “dargs()” below.
-
-[![dargs() screenshot](/img/tutorials/devel-dargs.png)](/img/tutorials/devel-dargs.png)
+[![dargs() screenshot](/img/tutorials/devel-dargs.png)](/img/tutorials/devel-dargs.png){: .noborder}
 
 ### dd()
 
@@ -113,17 +101,13 @@ If you’re using a flavor of Linux you can use the command “tail -f drupal_de
 
     dd($data, $label = NULL)
 
-You can see example output in the screenshot “dd()” below.
-
 ### ddebug_backtrace()
 
 Prints the function call stack.
 
     ddebug_backtrace()
 
-You can see example output in the screenshot “ddebug_backtrace()” below.
-
-[![ddebug_backtrace() screenshot](/img/tutorials/devel-ddebug_backtrace.png)](/img/tutorials/devel-ddebug_backtrace.png)
+[![ddebug_backtrace() screenshot](/img/tutorials/devel-ddebug_backtrace.png)](/img/tutorials/devel-ddebug_backtrace.png){: .noborder}
 
 ### db_queryd()
 
@@ -131,6 +115,78 @@ This function is the debugging version of db_query(), which prints the query and
 
     db_queryd($query, $args = array())
 
-You can see example output in the screenshot “db_queryd()” below.
+[![db_queryd() screenshot](/img/tutorials/devel-db_queryd.png)](/img/tutorials/devel-db_queryd.png){: .noborder}
 
-[![db_queryd() screenshot](/img/tutorials/devel-db_queryd.png)](/img/tutorials/devel-db_queryd.png)
+## Drupal for Firebug
+
+All the examples in this section assume that you are running a recent version of [Firefox](http://getfirefox.com/) with the [Firebug add-on](https://addons.mozilla.org/en-US/firefox/addon/1843).
+
+Please note that Drupal for Firebug doesn’t seem to work with the Theme developer module from the Devel package.
+
+### Installation
+
+* Install the Drupal for Firebug module
+* Install the DrupalForFirebug Firefox add-on. You can find a link to the current version on the Drupal for Firebug project page.
+
+When you have installed the Firefox add-on, go to Administer → Build → Modules and enable the two Drupal for Firebug modules.
+
+### In use
+
+Once you have installed the add-on and enabled the modules, a new Drupal tab becomes available in Firebug. The following sections describe each subtab.
+
+#### General
+
+The general tab serves as a general log area for Drupal for Firebug. It tells you whether the site you’re looking at is running Drupal and has Drupal for Firebug installed and enabled.
+
+If you want to keep your Drupal-related log messages out of the normal Firebug console, you can write messages to the Drupal for Firebug log with the firep() function:
+
+    firep($item, $optional_title)
+
+You can see example output in the screenshots “General: Off” and “General: On” below.
+
+[![General: Off](/img/tutorials/dff-general-off.png)](/img/tutorials/dff-general-off.png){: .noborder}
+
+[![General: On](/img/tutorials/dff-general-on.png)](/img/tutorials/dff-general-on.png){: .noborder}
+
+#### SQL
+
+To use the SQL tab you must first enable query info collection. Go to Administer → Site configuration → Devel settings and mark the checkbox labelled “Collect query info”.
+
+The SQL tab now displays a list of all the database queries which have been made to build the current page. This is essentially the same output displayed by the Devel module when “Display query log” is enabled, but you can use the SQL tab if you don’t want the list of database queries cluttering up the page display.
+
+You can see example output in the screenshot “SQL” below.
+Forms
+
+The Forms tab displays the form arrays used to build the forms on the current page. This can be useful when trying to identify the right array key to use when modifying or removing a form element.
+
+You can see example output in the screenshot “Forms” below.
+Users
+
+The Users tab displays the $user object associated with the currently logged-in user, or with the anonymous user if the current session isn’t logged in.
+
+In order to see the output for users other than the root user (UID = 1), you must grant the user the “Access Firebug Debug” permission.
+
+You can see example output in the screenshot “Users” below.
+Nodes
+
+The Nodes tab displays information about every node loaded on the current page.
+
+The output shows the contents of the node object after it has been loaded, after the view phase, and after the alter phase. This is useful for determining the point at which the contents of the node are being modified. Also, this is a handy way of obtaining an overview of the available node fields when developing custom node templates.
+
+You can see example output in the screenshot “Nodes” below.
+Views
+
+The Views tab displays information about the views on the current page.
+
+You can use this tab to gain an overview of the types of displays used, the base tables, and the pager settings of the different views.
+
+You can see example output in the screenshot “Views” below.
+Execute PHP
+
+The Execute PHP tab lets you execute PHP code in the context of a fully bootstrapped Drupal instance. This can be useful when you want to check the output of functions which do not display any data in the frontend. Also, you can use it to make quick checks on the values of Drupal variables or global variables.
+
+All the code you execute will behave as if it were implemented as a page callback for the path “admin/firebug/exec”.
+
+Only users with the “Execute Firebug PHP” permission can use this tab.
+
+You can see example output in the screenshot “Execute PHP” below.
