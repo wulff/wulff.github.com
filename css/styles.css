@@ -1,10 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 body {
   padding: 50px;
+  margin: 0;
   font: 15px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   font-weight: 400;
+  border-top: 3px solid #883400;
 }
 
 header {
@@ -40,7 +42,12 @@ section img {
 footer {
   width: 360px;
   float: right;
-  margin-top: 4em;
+  margin-top: 57px;
+  color: #999;
+}
+
+footer a {
+  color: #66f;
 }
 
 .wrapper {
@@ -55,13 +62,61 @@ article h1 {
   font-weight: bold;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+  margin: 0 0 20px;
+}
+
+p, ul, ol, table, pre, dl {
+  margin: 0 0 20px;
+}
+
 strong {
   font-weight: 700;
 }
 
-p.da {
+div.badges {
   margin-top: 4em;
 }
-p.lym {
-  margin-top: 2em;
+
+div.badges div {
+  float: left;
+  margin-right: 2em;
+}
+
+/* TODO: implement vertical rythm stuff from blueprint */
+
+@media print, screen and (max-width: 960px) {
+  div.wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  header, section, footer {
+    float: none;
+    position: static;
+    width: auto;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding:15px;
+  }
+  
+  header ul {
+    display:none;
+  }
 }
