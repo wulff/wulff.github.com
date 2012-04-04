@@ -125,8 +125,8 @@ Please note that Drupal for Firebug doesn’t seem to work with the Theme develo
 
 ### Installation
 
-* Install the Drupal for Firebug module
-* Install the DrupalForFirebug Firefox add-on. You can find a link to the current version on the Drupal for Firebug project page.
+* Install the [Drupal for Firebug](http://drupal.org/project/DrupalForFirebug) module
+* Install the [DrupalForFirebug Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/8370). You can find a link to the current version on the Drupal for Firebug [project page](http://drupal.org/project/DrupalForFirebug).
 
 When you have installed the Firefox add-on, go to Administer → Build → Modules and enable the two Drupal for Firebug modules.
 
@@ -154,34 +154,39 @@ To use the SQL tab you must first enable query info collection. Go to Administer
 
 The SQL tab now displays a list of all the database queries which have been made to build the current page. This is essentially the same output displayed by the Devel module when “Display query log” is enabled, but you can use the SQL tab if you don’t want the list of database queries cluttering up the page display.
 
-You can see example output in the screenshot “SQL” below.
-Forms
+[![SQL tab](/img/tutorials/dff-sql.png)](/img/tutorials/dff-sql.png){: .noborder}
+
+#### Forms
 
 The Forms tab displays the form arrays used to build the forms on the current page. This can be useful when trying to identify the right array key to use when modifying or removing a form element.
 
-You can see example output in the screenshot “Forms” below.
-Users
+[![Forms tab](/img/tutorials/dff-forms.png)](/img/tutorials/dff-forms.png){: .noborder}
+
+#### Users
 
 The Users tab displays the $user object associated with the currently logged-in user, or with the anonymous user if the current session isn’t logged in.
 
 In order to see the output for users other than the root user (UID = 1), you must grant the user the “Access Firebug Debug” permission.
 
-You can see example output in the screenshot “Users” below.
-Nodes
+[![Users tab](/img/tutorials/dff-users.png)](/img/tutorials/dff-users.png){: .noborder}
+
+#### Nodes
 
 The Nodes tab displays information about every node loaded on the current page.
 
 The output shows the contents of the node object after it has been loaded, after the view phase, and after the alter phase. This is useful for determining the point at which the contents of the node are being modified. Also, this is a handy way of obtaining an overview of the available node fields when developing custom node templates.
 
-You can see example output in the screenshot “Nodes” below.
-Views
+[![Nodes tab](/img/tutorials/dff-nodes.png)](/img/tutorials/dff-nodes.png){: .noborder}
+
+#### Views
 
 The Views tab displays information about the views on the current page.
 
 You can use this tab to gain an overview of the types of displays used, the base tables, and the pager settings of the different views.
 
-You can see example output in the screenshot “Views” below.
-Execute PHP
+[![Views tab](/img/tutorials/dff-views.png)](/img/tutorials/dff-views.png){: .noborder}
+
+#### Execute PHP
 
 The Execute PHP tab lets you execute PHP code in the context of a fully bootstrapped Drupal instance. This can be useful when you want to check the output of functions which do not display any data in the frontend. Also, you can use it to make quick checks on the values of Drupal variables or global variables.
 
@@ -189,4 +194,126 @@ All the code you execute will behave as if it were implemented as a page callbac
 
 Only users with the “Execute Firebug PHP” permission can use this tab.
 
-You can see example output in the screenshot “Execute PHP” below.
+[![Execute PHP tab](/img/tutorials/dff-php.png)](/img/tutorials/dff-php.png){: .noborder}
+
+## FirePHP
+
+All the examples in this section assume that you are running a recent version of [Firefox](http://getfirefox.com/) with the [Firebug add-on](https://addons.mozilla.org/en-US/firefox/addon/1843), and that the Devel module is enabled.
+
+### Installation
+
+* Install the [FirePHP Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/6149).
+* Download and install the [FirePHP library](http://www.firephp.org/) per the instructions in Devel module’s README file.
+
+### In use
+
+#### dfb()
+
+You can use the dfb() function to write log messages directly to the general Firebug console.
+
+    dfb($input, $label = NULL)
+
+Set the $label parameter to distinguish log messages from different parts of the code (i.e. a function name, a module name or another identifier).
+
+[![dfb()](/img/tutorials/firephp-dfb.png)](/img/tutorials/firephp-dfb.png){: .noborder}
+
+#### dfb() with severity levels
+
+It is possible to write log messages with different severity levels by adding an extra parameter to the function call:
+
+    dfb($input, $label = NULL, $severity = FirePHP::LOG)
+
+You can choose from the following severity levels:
+
+* **FirePHP::LOG** A normal log message
+* **FirePHP::INFO** Adds a blue information icon to the log message
+* **FirePHP::WARN** Adds a blue information icon and a cyan background color to the log message
+* **FirePHP::ERROR** Adds a red error icon to the log message and displays a Firebug error in the status bar
+
+[![dfb() with severity levels](/img/tutorials/firephp-dfb-severity.png)](/img/tutorials/firephp-dfb-severity.png){: .noborder}
+
+## XDebug & NetBeans
+
+At the moment this guide is only available for Ubuntu. This part of the guide assumes that you have a running Ubuntu system with Apache, MySQL and PHP installed, and that they are configured to run Drupal locally.
+Installation
+
+* Download and install the [PHP version of NetBeans](http://www.netbeans.org/downloads/index.html).
+* Install the php5-xdebug-package using Ubuntu’s built-in package manager.
+
+### In use
+
+#### Create a project in NetBeans
+
+* Choose File → New Project…
+* Select PHP Application from Existing Sources [![Project: Type](/img/tutorials/nb_project_1.png)](/img/tutorials/nb_project_1.png){: .noborder}
+* Select the root folder of your Drupal project and choose a name for your project. In most cases it’s easiest to let NetBeans store the metadata in the Drupal root directory since you can just tell your VCS to ignore this folder [![Project: Source](/img/tutorials/nb_project_2.png)](/img/tutorials/nb_project_2.png){: .noborder}
+* Choose Run as Local Web Site and enter the local URL you use to access the site [![Project: Run configuration](/img/tutorials/nb_project_3.png)](/img/tutorials/nb_project_3.png){: .noborder}
+* Go to Tools → Options
+* On the PHP tab uncheck the box “Stop at the First Line” to make sure the debugger only stops if you have set one or more breakpoints [![Project: PHP options](/img/tutorials/nb_project_4.png)](/img/tutorials/nb_project_4.png){: .noborder}
+
+#### Start debugging
+
+* Open the file you wish to debug
+* Add one or more breakpoints by clicking on a line number in the margin or by pressing CTRL+F8 [![Debug: Breakpoint](/img/tutorials/nb_debug_1.png)](/img/tutorials/nb_debug_1.png){: .noborder}
+* Choose Debug → Debug project or press CTRL+F5
+* Choose Server side PHP and click Debug. Check the box “Do not show again” if you don’t want to be presented with this dialog every time you start the debugger [![Debug: Dialog](/img/tutorials/nb_debug_2.png)](/img/tutorials/nb_debug_2.png){: .noborder}
+
+When the debugger is running you can use the Local Variables tab to display the contents of all the variables which are currently in scope as well as all superglobals.
+
+[![Debug: Local variables](/img/tutorials/nb_debug_3.png)](/img/tutorials/nb_debug_3.png){: .noborder}
+
+The Call Stack tab shows the current position in the call stack.
+
+[![Debug: Call stack](/img/tutorials/nb_debug_4.png)](/img/tutorials/nb_debug_4.png){: .noborder}
+
+You can add more tabs by going to the *Window → Debugging* menu in NetBeans.
+
+#### Keyboard shortcuts
+
+Use the following shortcuts to step through the code when running under the debugger:
+
+Key     | Action        |
+--------|---------------|
+F5      | Continue      |
+F8      | Step over     |
+F7      | Step into     |
+CTRL+F7 | Step out      |
+F4      | Run to cursor |
+
+## Profiling with Xdebug
+
+In addition to its basic use as a debugging tool, you can also use it to profile your code. This is a two-step process: First you use Xdebug to generate a cachegrind output file. Then, you use a tool like Webgrind to analyze the output file.
+
+If you have Xdebug installed and configured, you can enable profiling by adding this line to your xdebug.ini file:
+
+    xdebug.profiler_enable_trigger=1
+
+The xdebug.ini file can usually be found in `/etc/php5/conf.d/`.
+
+To create the cachegrind file, add an `?XDEBUG_PROFILE` query parameter when loading a page on your site:
+
+    drupal.local/?XDEBUG_PROFILE
+
+This generates a cachegrind.out.&lt;pid&gt; file in your `/tmp` directory.
+
+To analyze the output file you can install a tool like Webgrind on your local web server:
+
+* Get the latest copy of [Webgrind](http://code.google.com/p/webgrind/).
+* Install it in a local directory and create a virtual host for it, so you can access it at [http://webgrind/](http://webgrind/).
+
+When you access the Webgrind frontpage, you can use the dropdown box at the top of the screen to select the cachegrind file you want to analyze.
+
+After processing the file webgrind displays a list of all the functions which where called to build the current page. See the screenshots below for example output.
+
+[![Overview](/img/tutorials/webgrind-overview.png)](/img/tutorials/webgrind-overview.png){: .noborder}
+
+[![Detail](/img/tutorials/webgrind-expanded.png)](/img/tutorials/webgrind-expanded.png){: .noborder}
+
+[![XDebug.ini](/img/tutorials/xdebug.ini.png)](/img/tutorials/xdebug.ini.png){: .noborder}
+
+## Other resources
+
+* [Drupal Debugging](http://randyfay.com/debugging_drupal)
+* [Quick-and-Dirty Debugging](http://www.lullabot.com/articles/quick_and_dirty_debugging)
+* [Trace](http://drupal.org/project/trace)
+* [Resources and links on debugging, tracing and profiling Drupal](http://2bits.com/articles/resources-and-links-on-debugging-tracing-and-profiling-drupal.html)
