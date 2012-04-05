@@ -202,6 +202,7 @@ div.badges div:last-child {
 
   header h1 {
     background: url("/img/ratatosk-iphone.png") no-repeat scroll left top transparent;
+    width: 290px;
   }
 
   header ul {
