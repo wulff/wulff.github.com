@@ -1,0 +1,9 @@
+---
+layout: post
+title: Status for den danske oversættelse
+language: da
+categories: drupal
+tags: l10n status
+---
+
+# {{ page.title }}
