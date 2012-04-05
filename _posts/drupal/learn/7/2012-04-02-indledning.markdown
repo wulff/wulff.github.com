@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Indledning
-permalink: learn/drupal/7/indledning.html
+permalink: drupal/learn/7/indledning.html
 language: da
-categories: learn drupal
+categories: drupal learn
 tags: indledning
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Domæne og webhotel
-permalink: learn/drupal/7/webhotel.html
+permalink: drupal/learn/7/webhotel.html
 language: da
-categories: learn drupal
+categories: drupal learn
 tags: webhotel gratisdns
 ---
 

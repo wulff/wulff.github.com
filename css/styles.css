@@ -157,7 +157,10 @@ div.badges {
 
 div.badges div {
   float: left;
-  margin-right: 2em;
+  margin-right: 2.5em;
+}
+div.badges div:last-child {
+  margin-right: 0;
 }
 
 /* --- media selectors ------------------------------------------------------ */
@@ -176,6 +179,10 @@ div.badges div {
 
   header {
     padding-bottom: 20px;
+  }
+
+  header h1 {
+    margin-bottom: 0;
   }
 
   section {
@@ -203,6 +210,10 @@ div.badges div {
     font-size: 12pt;
     color: #000;
     border-top: none;
+  }
+
+  header h1 {
+    margin-bottom: 0;
   }
 
   header img {

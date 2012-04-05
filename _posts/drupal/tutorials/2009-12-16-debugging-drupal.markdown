@@ -2,7 +2,7 @@
 layout: post
 title: Debugging Drupal
 teaser: A short guide to the Devel module and Drupal for Firebug.
-permalink: tutorials/debugging-drupal.html
+permalink: drupal/tutorials/debugging-drupal.html
 language: en
 categories: tutorials
 tags: debugging drupal tutorial
