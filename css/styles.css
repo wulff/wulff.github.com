@@ -90,6 +90,13 @@ pre {
   overflow-x: auto;
 }
 
+th {
+  text-align: left;
+}
+td, th {
+  padding-right: 2em;
+}
+
 /* --- layout --------------------------------------------------------------- */
 
 .wrapper {

@@ -9,11 +9,8 @@ tags: l10n status
 
 # {{ page.title }}
 
-*Sidst opdateret 2012-04-05.* 
+*Sidst opdateret 2012-04-05.*
 
-Der er pt. ingen status fordi localize.drupal.org ikke viser statistik for hvert projekt i øjeblikket.
-
-<!--
 ## Core
 
 Navn|Ikke oversat|Forslag|
@@ -22,13 +19,90 @@ Navn|Ikke oversat|Forslag|
 
 ## Distributioner
 
+Navn|Ikke oversat|Forslag|
+----|------------|-------|
+[ns_core](http://localize.drupal.org/translate/languages/da/translate?project=ns_core&status=1&limit=20)|**193**|**0**|
+
 ## Populære moduler
 
 Baseret på listen af populære downloads på http://localize.drupal.org/translate/languages/da.
 
+Module|Ikke oversat|Forslag|
+----|------------|-------|
+[admin_menu](http://localize.drupal.org/translate/languages/da/translate?project=admin_menu&status=1&limit=20)|0|0|
+[advanced_help](http://localize.drupal.org/translate/languages/da/translate?project=advanced_help&status=1&limit=20)|0|0|
+[cache_actions](http://localize.drupal.org/translate/languages/da/translate?project=cache_actions&status=1&limit=20)|**85**|**0**|
+[captcha](http://localize.drupal.org/translate/languages/da/translate?project=captcha&status=1&limit=20)|0|0|
+[commerce](http://localize.drupal.org/translate/languages/da/translate?project=commerce&status=1&limit=20)|**0**|**1**|
+[commerce_paypal](http://localize.drupal.org/translate/languages/da/translate?project=commerce_paypal&status=1&limit=20)|0|0|
+[commerce_shipping](http://localize.drupal.org/translate/languages/da/translate?project=commerce_shipping&status=1&limit=20)|**24**|**1**|
+[ctools](http://localize.drupal.org/translate/languages/da/translate?project=ctools&status=1&limit=20)|0|0|
+[date](http://localize.drupal.org/translate/languages/da/translate?project=date&status=1&limit=20)|**116**|**0**|
+[demo](http://localize.drupal.org/translate/languages/da/translate?project=demo&status=1&limit=20)|0|0|
+[devel](http://localize.drupal.org/translate/languages/da/translate?project=devel&status=1&limit=20)|**90**|**0**|
+[dibs](http://localize.drupal.org/translate/languages/da/translate?project=dibs&status=1&limit=20)|**115**|**0**|
+[diff](http://localize.drupal.org/translate/languages/da/translate?project=diff&status=1&limit=20)|0|0|
+[dynamic_formatters](http://localize.drupal.org/translate/languages/da/translate?project=dynamic_formatters&status=1&limit=20)|**62**|**0**|
+[entity](http://localize.drupal.org/translate/languages/da/translate?project=entity&status=1&limit=20)|**137**|**0**|
+[entitycache](http://localize.drupal.org/translate/languages/da/translate?project=entitycache&status=1&limit=20)|**3**|**0**|
+[entityreference](http://localize.drupal.org/translate/languages/da/translate?project=entityreference&status=1&limit=20)|**2**|**0**|
+[features](http://localize.drupal.org/translate/languages/da/translate?project=features&status=1&limit=20)|**107**|**0**|
+[feeds](http://localize.drupal.org/translate/languages/da/translate?project=feeds&status=1&limit=20)|**460**|**0**|
+[field_group](http://localize.drupal.org/translate/languages/da/translate?project=field_group&status=1&limit=20)|0|0|
+[file_entity](http://localize.drupal.org/translate/languages/da/translate?project=file_entity&status=1&limit=20)|0|0|
+[flag](http://localize.drupal.org/translate/languages/da/translate?project=flag&status=1&limit=20)|**58**|**0**|
+[globalredirect](http://localize.drupal.org/translate/languages/da/translate?project=globalredirect&status=1&limit=20)|0|0|
+[google_analytics](http://localize.drupal.org/translate/languages/da/translate?project=google_analytics&status=1&limit=20)|0|0|
+[i18n](http://localize.drupal.org/translate/languages/da/translate?project=i18n&status=1&limit=20)|**587**|**0**|
+[imce](http://localize.drupal.org/translate/languages/da/translate?project=imce&status=1&limit=20)|0|0|
+[imageapi](http://localize.drupal.org/translate/languages/da/translate?project=imageapi&status=1&limit=20)|0|0|
+[insert](http://localize.drupal.org/translate/languages/da/translate?project=insert&status=1&limit=20)|0|0|
+[job_scheduler](http://localize.drupal.org/translate/languages/da/translate?project=job_scheduler&status=1&limit=20)|0|0|
+[libraries](http://localize.drupal.org/translate/languages/da/translate?project=libraries&status=1&limit=20)|0|0|
+[link](http://localize.drupal.org/translate/languages/da/translate?project=link&status=1&limit=20)|0|0|
+[markdown](http://localize.drupal.org/translate/languages/da/translate?project=markdown&status=1&limit=20)|0|0|
+[media](http://localize.drupal.org/translate/languages/da/translate?project=media&status=1&limit=20)|0|0|
+[menu_block](http://localize.drupal.org/translate/languages/da/translate?project=menu_block&status=1&limit=20)|0|0|
+[panelizer](http://localize.drupal.org/translate/languages/da/translate?project=panelizer&status=1&limit=20)|0|0|
+[panels](http://localize.drupal.org/translate/languages/da/translate?project=panels&status=1&limit=20)|**525**|**0**|
+[pathauto](http://localize.drupal.org/translate/languages/da/translate?project=pathauto&status=1&limit=20)|0|0|
+[quickpay](http://localize.drupal.org/translate/languages/da/translate?project=quickpay&status=1&limit=20)|0|0|
+[redirect](http://localize.drupal.org/translate/languages/da/translate?project=redirect&status=1&limit=20)|0|0|
+[references](http://localize.drupal.org/translate/languages/da/translate?project=references&status=1&limit=20)|**69**|**0**|
+[references_dialog](http://localize.drupal.org/translate/languages/da/translate?project=references_dialog&status=1&limit=20)|**14**|**0**|
+[rules](http://localize.drupal.org/translate/languages/da/translate?project=rules&status=1&limit=20)|**939**|**1**|
+[scheduler](http://localize.drupal.org/translate/languages/da/translate?project=scheduler&status=1&limit=20)|**61**|**0**|
+[services](http://localize.drupal.org/translate/languages/da/translate?project=services&status=1&limit=20)|**334**|**0**|
+[strongarm](http://localize.drupal.org/translate/languages/da/translate?project=strongarm&status=1&limit=20)|0|0|
+[taxonomy_menu_form](http://localize.drupal.org/translate/languages/da/translate?project=taxonomy_menu_form&status=1&limit=20)|0|0|
+[token](http://localize.drupal.org/translate/languages/da/translate?project=token&status=1&limit=20)|0|0|
+[transliteration](http://localize.drupal.org/translate/languages/da/translate?project=transliteration&status=1&limit=20)|0|0|
+[variable](http://localize.drupal.org/translate/languages/da/translate?project=variable&status=1&limit=20)|0|0|
+[views](http://localize.drupal.org/translate/languages/da/translate?project=views&status=1&limit=20)|0|0|
+[webform](http://localize.drupal.org/translate/languages/da/translate?project=webform&status=1&limit=20)|**57**|**0**|
+[workbench](http://localize.drupal.org/translate/languages/da/translate?project=workbench&status=1&limit=20)|0|0|
+[workbench_access](http://localize.drupal.org/translate/languages/da/translate?project=workbench_access&status=1&limit=20)|0|0|
+[workbench_media](http://localize.drupal.org/translate/languages/da/translate?project=workbench_media&status=1&limit=20)|0|0|
+[workbench_moderation](http://localize.drupal.org/translate/languages/da/translate?project=workbench_moderation&status=1&limit=20)|**174**|**0**|
+[wysiwyg](http://localize.drupal.org/translate/languages/da/translate?project=wysiwyg&status=1&limit=20)|0|0|
+
 ## L10N
+
+Modul|Ikke oversat|Forslag|
+----|------------|-------|
+[l10n_client](http://localize.drupal.org/translate/languages/da/translate?project=l10n_client&status=1&limit=20)|0|0|
+[l10n_install](http://localize.drupal.org/translate/languages/da/translate?project=l10n_install&status=1&limit=20)|0|0|
+[l10n_server](http://localize.drupal.org/translate/languages/da/translate?project=l10n_server&status=1&limit=20)|**247**|**0**|
+[l10n_update](http://localize.drupal.org/translate/languages/da/translate?project=l10n_update&status=1&limit=20)|0|0|
 
 ## Themes
 
-## Andre
--->
+Navn|Ikke oversat|Forslag|
+----|------------|-------|
+[fusion](http://localize.drupal.org/translate/languages/da/translate?project=fusion&status=1&limit=20)|0|0|
+[mothership](http://localize.drupal.org/translate/languages/da/translate?project=mothership&status=1&limit=20)|**337**|**0**|
+[ns_theme](http://localize.drupal.org/translate/languages/da/translate?project=ns_theme&status=1&limit=20)|**9**|**0**|
+[omega](http://localize.drupal.org/translate/languages/da/translate?project=omega&status=1&limit=20)|**481**|**0**|
+[rubik](http://localize.drupal.org/translate/languages/da/translate?project=rubik&status=1&limit=20)|0|0|
+[tao](http://localize.drupal.org/translate/languages/da/translate?project=tao&status=1&limit=20)|0|0|
+[zen](http://localize.drupal.org/translate/languages/da/translate?project=zen&status=1&limit=20)|0|0|
