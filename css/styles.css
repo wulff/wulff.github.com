@@ -219,6 +219,10 @@ div.badges div:last-child {
   section {
     padding-top: 0;
   }
+
+  td, th {
+    padding-right: 1em;
+  }
 }
 
 @media print {

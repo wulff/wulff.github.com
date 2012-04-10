@@ -7,8 +7,6 @@ categories: drupal
 tags: l10n status
 ---
 
-# {{ page.title }}
-
 *Sidst opdateret 2012-04-05.*
 
 ## Core

@@ -3,25 +3,26 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Ratatosk</title>
- <link href="http://ratatosk.net/atom.xml" rel="self"/>
- <link href="http://ratatosk.net/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://ratatosk.net/</id>
- <author>
-   <name>Morten Wulff</name>
-   <email>wulff@ratatosk.net</email>
- </author>
-
- {% for post in site.posts %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="http://ratatosk.net{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://ratatosk.net{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
- 
+  <title>Ratatosk</title>
+  <link href="http://ratatosk.net/"/>
+  <link type="application/atom+xml" rel="self" href="http://ratatosk.net/atom.xml" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://ratatosk.net/</id>
+  <author>
+    <name>Morten Wulff</name>
+    <email>wulff@ratatosk.net</email>
+  </author>
+  {% for post in site.posts %}
+  <entry>
+    <id>http://ratatosk.net{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://ratatosk.net{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Morten Wulff</name>
+      <uri>http://ratatosk.net/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
 </feed>

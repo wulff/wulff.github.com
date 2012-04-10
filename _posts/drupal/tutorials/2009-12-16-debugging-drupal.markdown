@@ -8,8 +8,6 @@ categories: tutorials
 tags: debugging drupal tutorial
 ---
 
-# {{ page.title }}
-
 This page gives a brief overview of some of the tools you can use to make Drupal development and debugging easier.
 
 It covers the Devel contrib module, the Drupal for Firebug contrib module and Firefox extension, the FirePHP library, and the combination of NetBeans and Xdebug.
@@ -37,7 +35,7 @@ Prints a variable to the ‘message’ area of the page using drupal_set_message
 
 If, for some reason, you are not using Krumo, you can use the $name parameter to distinguish between different calls to dpm().
 
-[![dpm() screenshot](/img/tutorials/devel-dpm.png)](/img/tutorials/devel-dpm.png){: .noborder}
+[![dpm() screenshot](/img/tutorials/debugging-drupal/devel-dpm.png)](/img/tutorials/debugging-drupal/devel-dpm.png){: .noborder}
 
 ### dvm()
 
@@ -47,7 +45,7 @@ Uses var_dump() to print a variable to the ‘message’ area of the page using 
 
 If, for some reason, you are not using Krumo, you can use the $name parameter to distinguish between different calls to dvm().
 
-[![dvm() screenshot](/img/tutorials/devel-dvm.png)](/img/tutorials/devel-dvm.png){: .noborder}
+[![dvm() screenshot](/img/tutorials/debugging-drupal/devel-dvm.png)](/img/tutorials/debugging-drupal/devel-dvm.png){: .noborder}
 
 ### dpr()
 
@@ -59,7 +57,7 @@ Set the second parameter to TRUE if you want to return a string instead of print
 
 You can use the $name parameter to distinguish between different calls to dpr().
 
-[![dpr() screenshot](/img/tutorials/devel-dpr.png)](/img/tutorials/devel-dpr.png){: .noborder}
+[![dpr() screenshot](/img/tutorials/debugging-drupal/devel-dpr.png)](/img/tutorials/debugging-drupal/devel-dpr.png){: .noborder}
 
 ### dvr()
 
@@ -71,7 +69,7 @@ Set the second parameter to TRUE if you want to return a string instead of print
 
 You can use the $name parameter to distinguish between different calls to dvr().
 
-[![dvr() screenshot](/img/tutorials/devel-dvr.png)](/img/tutorials/devel-dvr.png){: .noborder}
+[![dvr() screenshot](/img/tutorials/debugging-drupal/devel-dvr.png)](/img/tutorials/debugging-drupal/devel-dvr.png){: .noborder}
 
 ### kpr()
 
@@ -81,7 +79,7 @@ Pretty-prints a variable to the browser using krumo. The output is displayed in 
 
 Set the second parameter to TRUE if you want to return a string instead of printing it.
 
-[![kpr() screenshot](/img/tutorials/devel-kpr.png)](/img/tutorials/devel-kpr.png){: .noborder}
+[![kpr() screenshot](/img/tutorials/debugging-drupal/devel-kpr.png)](/img/tutorials/debugging-drupal/devel-kpr.png){: .noborder}
 
 ### dargs()
 
@@ -89,7 +87,7 @@ Prints the arguments passed into the current function. In this case, the argumen
 
     dargs()
 
-[![dargs() screenshot](/img/tutorials/devel-dargs.png)](/img/tutorials/devel-dargs.png){: .noborder}
+[![dargs() screenshot](/img/tutorials/debugging-drupal/devel-dargs.png)](/img/tutorials/debugging-drupal/devel-dargs.png){: .noborder}
 
 ### dd()
 
@@ -107,7 +105,7 @@ Prints the function call stack.
 
     ddebug_backtrace()
 
-[![ddebug_backtrace() screenshot](/img/tutorials/devel-ddebug_backtrace.png)](/img/tutorials/devel-ddebug_backtrace.png){: .noborder}
+[![ddebug_backtrace() screenshot](/img/tutorials/debugging-drupal/devel-ddebug_backtrace.png)](/img/tutorials/debugging-drupal/devel-ddebug_backtrace.png){: .noborder}
 
 ### db_queryd()
 
@@ -115,7 +113,7 @@ This function is the debugging version of db_query(), which prints the query and
 
     db_queryd($query, $args = array())
 
-[![db_queryd() screenshot](/img/tutorials/devel-db_queryd.png)](/img/tutorials/devel-db_queryd.png){: .noborder}
+[![db_queryd() screenshot](/img/tutorials/debugging-drupal/devel-db_queryd.png)](/img/tutorials/debugging-drupal/devel-db_queryd.png){: .noborder}
 
 ## Drupal for Firebug
 
@@ -144,9 +142,9 @@ If you want to keep your Drupal-related log messages out of the normal Firebug c
 
 You can see example output in the screenshots “General: Off” and “General: On” below.
 
-[![General: Off](/img/tutorials/dff-general-off.png)](/img/tutorials/dff-general-off.png){: .noborder}
+[![General: Off](/img/tutorials/debugging-drupal/dff-general-off.png)](/img/tutorials/debugging-drupal/dff-general-off.png){: .noborder}
 
-[![General: On](/img/tutorials/dff-general-on.png)](/img/tutorials/dff-general-on.png){: .noborder}
+[![General: On](/img/tutorials/debugging-drupal/dff-general-on.png)](/img/tutorials/debugging-drupal/dff-general-on.png){: .noborder}
 
 #### SQL
 
@@ -154,13 +152,13 @@ To use the SQL tab you must first enable query info collection. Go to Administer
 
 The SQL tab now displays a list of all the database queries which have been made to build the current page. This is essentially the same output displayed by the Devel module when “Display query log” is enabled, but you can use the SQL tab if you don’t want the list of database queries cluttering up the page display.
 
-[![SQL tab](/img/tutorials/dff-sql.png)](/img/tutorials/dff-sql.png){: .noborder}
+[![SQL tab](/img/tutorials/debugging-drupal/dff-sql.png)](/img/tutorials/debugging-drupal/dff-sql.png){: .noborder}
 
 #### Forms
 
 The Forms tab displays the form arrays used to build the forms on the current page. This can be useful when trying to identify the right array key to use when modifying or removing a form element.
 
-[![Forms tab](/img/tutorials/dff-forms.png)](/img/tutorials/dff-forms.png){: .noborder}
+[![Forms tab](/img/tutorials/debugging-drupal/dff-forms.png)](/img/tutorials/debugging-drupal/dff-forms.png){: .noborder}
 
 #### Users
 
@@ -168,7 +166,7 @@ The Users tab displays the $user object associated with the currently logged-in 
 
 In order to see the output for users other than the root user (UID = 1), you must grant the user the “Access Firebug Debug” permission.
 
-[![Users tab](/img/tutorials/dff-users.png)](/img/tutorials/dff-users.png){: .noborder}
+[![Users tab](/img/tutorials/debugging-drupal/dff-users.png)](/img/tutorials/debugging-drupal/dff-users.png){: .noborder}
 
 #### Nodes
 
@@ -176,7 +174,7 @@ The Nodes tab displays information about every node loaded on the current page.
 
 The output shows the contents of the node object after it has been loaded, after the view phase, and after the alter phase. This is useful for determining the point at which the contents of the node are being modified. Also, this is a handy way of obtaining an overview of the available node fields when developing custom node templates.
 
-[![Nodes tab](/img/tutorials/dff-nodes.png)](/img/tutorials/dff-nodes.png){: .noborder}
+[![Nodes tab](/img/tutorials/debugging-drupal/dff-nodes.png)](/img/tutorials/debugging-drupal/dff-nodes.png){: .noborder}
 
 #### Views
 
@@ -184,7 +182,7 @@ The Views tab displays information about the views on the current page.
 
 You can use this tab to gain an overview of the types of displays used, the base tables, and the pager settings of the different views.
 
-[![Views tab](/img/tutorials/dff-views.png)](/img/tutorials/dff-views.png){: .noborder}
+[![Views tab](/img/tutorials/debugging-drupal/dff-views.png)](/img/tutorials/debugging-drupal/dff-views.png){: .noborder}
 
 #### Execute PHP
 
@@ -194,7 +192,7 @@ All the code you execute will behave as if it were implemented as a page callbac
 
 Only users with the “Execute Firebug PHP” permission can use this tab.
 
-[![Execute PHP tab](/img/tutorials/dff-php.png)](/img/tutorials/dff-php.png){: .noborder}
+[![Execute PHP tab](/img/tutorials/debugging-drupal/dff-php.png)](/img/tutorials/debugging-drupal/dff-php.png){: .noborder}
 
 ## FirePHP
 
@@ -215,7 +213,7 @@ You can use the dfb() function to write log messages directly to the general Fir
 
 Set the $label parameter to distinguish log messages from different parts of the code (i.e. a function name, a module name or another identifier).
 
-[![dfb()](/img/tutorials/firephp-dfb.png)](/img/tutorials/firephp-dfb.png){: .noborder}
+[![dfb()](/img/tutorials/debugging-drupal/firephp-dfb.png)](/img/tutorials/debugging-drupal/firephp-dfb.png){: .noborder}
 
 #### dfb() with severity levels
 
@@ -230,7 +228,7 @@ You can choose from the following severity levels:
 * **FirePHP::WARN** Adds a blue information icon and a cyan background color to the log message
 * **FirePHP::ERROR** Adds a red error icon to the log message and displays a Firebug error in the status bar
 
-[![dfb() with severity levels](/img/tutorials/firephp-dfb-severity.png)](/img/tutorials/firephp-dfb-severity.png){: .noborder}
+[![dfb() with severity levels](/img/tutorials/debugging-drupal/firephp-dfb-severity.png)](/img/tutorials/debugging-drupal/firephp-dfb-severity.png){: .noborder}
 
 ## XDebug & NetBeans
 
@@ -245,26 +243,26 @@ Installation
 #### Create a project in NetBeans
 
 * Choose File → New Project…
-* Select PHP Application from Existing Sources [![Project: Type](/img/tutorials/nb_project_1.png)](/img/tutorials/nb_project_1.png){: .noborder}
-* Select the root folder of your Drupal project and choose a name for your project. In most cases it’s easiest to let NetBeans store the metadata in the Drupal root directory since you can just tell your VCS to ignore this folder [![Project: Source](/img/tutorials/nb_project_2.png)](/img/tutorials/nb_project_2.png){: .noborder}
-* Choose Run as Local Web Site and enter the local URL you use to access the site [![Project: Run configuration](/img/tutorials/nb_project_3.png)](/img/tutorials/nb_project_3.png){: .noborder}
+* Select PHP Application from Existing Sources [![Project: Type](/img/tutorials/debugging-drupal/nb_project_1.png)](/img/tutorials/debugging-drupal/nb_project_1.png){: .noborder}
+* Select the root folder of your Drupal project and choose a name for your project. In most cases it’s easiest to let NetBeans store the metadata in the Drupal root directory since you can just tell your VCS to ignore this folder [![Project: Source](/img/tutorials/debugging-drupal/nb_project_2.png)](/img/tutorials/debugging-drupal/nb_project_2.png){: .noborder}
+* Choose Run as Local Web Site and enter the local URL you use to access the site [![Project: Run configuration](/img/tutorials/debugging-drupal/nb_project_3.png)](/img/tutorials/debugging-drupal/nb_project_3.png){: .noborder}
 * Go to Tools → Options
-* On the PHP tab uncheck the box “Stop at the First Line” to make sure the debugger only stops if you have set one or more breakpoints [![Project: PHP options](/img/tutorials/nb_project_4.png)](/img/tutorials/nb_project_4.png){: .noborder}
+* On the PHP tab uncheck the box “Stop at the First Line” to make sure the debugger only stops if you have set one or more breakpoints [![Project: PHP options](/img/tutorials/debugging-drupal/nb_project_4.png)](/img/tutorials/debugging-drupal/nb_project_4.png){: .noborder}
 
 #### Start debugging
 
 * Open the file you wish to debug
-* Add one or more breakpoints by clicking on a line number in the margin or by pressing CTRL+F8 [![Debug: Breakpoint](/img/tutorials/nb_debug_1.png)](/img/tutorials/nb_debug_1.png){: .noborder}
+* Add one or more breakpoints by clicking on a line number in the margin or by pressing CTRL+F8 [![Debug: Breakpoint](/img/tutorials/debugging-drupal/nb_debug_1.png)](/img/tutorials/debugging-drupal/nb_debug_1.png){: .noborder}
 * Choose Debug → Debug project or press CTRL+F5
-* Choose Server side PHP and click Debug. Check the box “Do not show again” if you don’t want to be presented with this dialog every time you start the debugger [![Debug: Dialog](/img/tutorials/nb_debug_2.png)](/img/tutorials/nb_debug_2.png){: .noborder}
+* Choose Server side PHP and click Debug. Check the box “Do not show again” if you don’t want to be presented with this dialog every time you start the debugger [![Debug: Dialog](/img/tutorials/debugging-drupal/nb_debug_2.png)](/img/tutorials/debugging-drupal/nb_debug_2.png){: .noborder}
 
 When the debugger is running you can use the Local Variables tab to display the contents of all the variables which are currently in scope as well as all superglobals.
 
-[![Debug: Local variables](/img/tutorials/nb_debug_3.png)](/img/tutorials/nb_debug_3.png){: .noborder}
+[![Debug: Local variables](/img/tutorials/debugging-drupal/nb_debug_3.png)](/img/tutorials/debugging-drupal/nb_debug_3.png){: .noborder}
 
 The Call Stack tab shows the current position in the call stack.
 
-[![Debug: Call stack](/img/tutorials/nb_debug_4.png)](/img/tutorials/nb_debug_4.png){: .noborder}
+[![Debug: Call stack](/img/tutorials/debugging-drupal/nb_debug_4.png)](/img/tutorials/debugging-drupal/nb_debug_4.png){: .noborder}
 
 You can add more tabs by going to the *Window → Debugging* menu in NetBeans.
 
@@ -305,11 +303,11 @@ When you access the Webgrind frontpage, you can use the dropdown box at the top 
 
 After processing the file webgrind displays a list of all the functions which where called to build the current page. See the screenshots below for example output.
 
-[![Overview](/img/tutorials/webgrind-overview.png)](/img/tutorials/webgrind-overview.png){: .noborder}
+[![Overview](/img/tutorials/debugging-drupal/webgrind-overview.png)](/img/tutorials/debugging-drupal/webgrind-overview.png){: .noborder}
 
-[![Detail](/img/tutorials/webgrind-expanded.png)](/img/tutorials/webgrind-expanded.png){: .noborder}
+[![Detail](/img/tutorials/debugging-drupal/webgrind-expanded.png)](/img/tutorials/debugging-drupal/webgrind-expanded.png){: .noborder}
 
-[![XDebug.ini](/img/tutorials/xdebug.ini.png)](/img/tutorials/xdebug.ini.png){: .noborder}
+[![XDebug.ini](/img/tutorials/debugging-drupal/xdebug.ini.png)](/img/tutorials/debugging-drupal/xdebug.ini.png){: .noborder}
 
 ## Other resources
 

@@ -8,5 +8,3 @@ categories: tutorials
 tags: localizing drupal tutorial
 ---
 
-# {{ page.title }}
-
