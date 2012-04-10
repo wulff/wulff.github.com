@@ -171,6 +171,15 @@ div.badges div:last-child {
   margin-right: 0;
 }
 
+ul.feeds {
+  background: url("/img/feed-icon-14x14.png") no-repeat scroll left 5px transparent;
+  padding-left: 17px;
+}
+ul.feeds li {
+  display: inline;
+  margin-left: .75em;
+}
+
 /* --- media selectors ------------------------------------------------------ */
 
 @media print, screen and (max-width: 960px) {
