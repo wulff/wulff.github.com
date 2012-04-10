@@ -234,6 +234,13 @@ ul.feeds li {
   }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  header h1 {
+    background: url("/img/ratatosk@2x.png") no-repeat;
+    background-size: 290px 30px;
+  }
+}
+
 @media print {
   body {
     padding: 0;
