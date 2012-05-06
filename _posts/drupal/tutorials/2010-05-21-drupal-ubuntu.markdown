@@ -630,10 +630,10 @@ When the cachegrind file has been written you can go to http://webgrind/ to star
 
 **TODO:** Description of the Webgrind interface.
 
-[![](/img/tutorials/drupal-ubuntu/106-webgrind-run.png)](/img/tutorials/drupal-ubuntu/106-webgrind-run.png){: .noborder}
+[![Start the profiler](/img/tutorials/drupal-ubuntu/106-webgrind-run.png)](/img/tutorials/drupal-ubuntu/106-webgrind-run.png){: .noborder}
 
-[![](/img/tutorials/drupal-ubuntu/107-webgrind-choose.png)](/img/tutorials/drupal-ubuntu/107-webgrind-choose.png){: .noborder}
+[![Choose file to analyze](/img/tutorials/drupal-ubuntu/107-webgrind-choose.png)](/img/tutorials/drupal-ubuntu/107-webgrind-choose.png){: .noborder}
 
-[![](/img/tutorials/drupal-ubuntu/108-webgrind-output-1.png)](/img/tutorials/drupal-ubuntu/108-webgrind-output-1.png){: .noborder}
+[![Output](/img/tutorials/drupal-ubuntu/108-webgrind-output-1.png)](/img/tutorials/drupal-ubuntu/108-webgrind-output-1.png){: .noborder}
 
-[![](/img/tutorials/drupal-ubuntu/109-webgrind-output-2.png)](/img/tutorials/drupal-ubuntu/109-webgrind-output-2.png){: .noborder}
+[![Output](/img/tutorials/drupal-ubuntu/109-webgrind-output-2.png)](/img/tutorials/drupal-ubuntu/109-webgrind-output-2.png){: .noborder}
